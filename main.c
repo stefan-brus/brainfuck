@@ -171,7 +171,7 @@ int main(int argc, char* argv[])
     int ptr = 0;
     int rc = 0;
 
-    while((buf = fgets(buf, INPUT_BUF_SIZE, stdin)))
+    while(fgets(buf, INPUT_BUF_SIZE, stdin))
     {
         check(buf, "Input error");
         rc = bf_run(buf, mem, &ptr);
